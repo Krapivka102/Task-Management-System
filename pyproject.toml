@@ -17,6 +17,8 @@ alembic = "^1.14.0"
 python-jose = "^3.3.0"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 aioredis = "^2.0.1"
+pydantic = {extras = ["all"], version = "^2.9.2"}
+ruff = "0.4.8"
 
 
 [build-system]
