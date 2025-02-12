@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  web_app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: web_app:latest
+    container_name: backend_cov
+    env_file:
+      - ../.env
+    environment:
+      UVICORN_HOST: ${UVICORN_HOST}
+      UVICORN_PORT: ${UVICORN_PORT}
+    ports:
+      - "${UVICORN_PORT}:${UVICORN_PORT}"
+    volumes:
+      - ../src:/app/src
+    command: "uvicorn --factory src.main:create_app --reload --host ${UVICORN_HOST} --port ${UVICORN_PORT}"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
