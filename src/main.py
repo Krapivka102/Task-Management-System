@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title='113-backend',
+        title='task-management-system',
         docs_url='/api/docs',
         debug=True,
     )

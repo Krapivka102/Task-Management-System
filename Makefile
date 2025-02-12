@@ -4,7 +4,7 @@ LOGS = docker logs
 ENV = --env-file .env
 APP_FILE = docker_compose/app.yaml
 STORAGES_FILE = docker_compose/storages.yaml
-APP_CONTAINER = backend_cov
+APP_CONTAINER = task_management_backend
 
 .PHONY: app
 app:

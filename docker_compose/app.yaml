@@ -6,7 +6,7 @@ services:
       context: ..
       dockerfile: Dockerfile
     image: web_app:latest
-    container_name: backend_cov
+    container_name: task_management_backend
     env_file:
       - ../.env
     environment:
